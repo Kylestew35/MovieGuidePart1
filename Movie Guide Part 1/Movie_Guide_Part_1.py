@@ -3,7 +3,7 @@
 print("Welcome to the Movie List Program!\n")
 
 def display_menu():
-    print("Menu:")
+    print("Command Menu:")
     print("list - Display all titles")
     print("add - Add a title")
     print("del - Delete a title")
@@ -36,15 +36,15 @@ def main():
 
     while True:
         display_menu()
-        choice = input("Enter your choice: ")
+        choice = input("Enter your command: ")
 
-        if choice == "1":
+        if choice == "list":
             display_titles(movie_list)
-        elif choice == "2":
+        elif choice == "add":
             add_title(movie_list)
-        elif choice == "3":
+        elif choice == "del":
             delete_title(movie_list)
-        elif choice == "4":
+        elif choice == "exit":
             print("Exiting the program.")
             break
         else:
